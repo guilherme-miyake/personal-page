@@ -3,5 +3,5 @@ import {TranslatableText} from "../locales/English";
 
 export default function useText() {
     const { t, } = useTranslation()
-    return t as (translatableText:TranslatableText) => String
+    return t as (translatableText:TranslatableText) => string
 }
