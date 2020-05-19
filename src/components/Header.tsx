@@ -37,8 +37,8 @@ export default function Header() {
             <LanguageController/>
         </Container>
         <Card className={classes.header}>
-            <Typography variant="h2">Guilherme Toshio Miyake</Typography>
-            <Typography variant="h4">{text("Job Title")}</Typography>
+            <Typography variant="h3">Guilherme Toshio Miyake</Typography>
+            <Typography variant="h5">{text("Job Title")}</Typography>
         </Card>
     </Fragment>
 }

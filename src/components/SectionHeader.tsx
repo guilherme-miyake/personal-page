@@ -28,7 +28,8 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         height: "8px",
         padding: "0",
-        borderRadius: "5px"
+        borderRadius: "5px",
+        margin: "0px 0px 20px 0px"
     }
 }));
 
