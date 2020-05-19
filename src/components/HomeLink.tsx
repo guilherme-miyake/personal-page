@@ -9,8 +9,8 @@ import {Link} from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
     card: {
-        width:"100%",
-        height:"100%",
+        width: "100%",
+        height: "100%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -22,7 +22,7 @@ const useStyles = makeStyles(() => ({
         alignItems: "center",
         justifyContent: "space-evenly"
     },
-    link:{
+    link: {
         width: "30%",
         minWidth: "300px",
         height: "300px",
@@ -43,11 +43,13 @@ const useStyles = makeStyles(() => ({
 
 export default function HomeLink(props: { title: string, to: string, icon: SvgIconComponent }) {
     const classes = useStyles()
-    return <Link to={props.to} className={classes.link}>
-        <Card className={classes.card}>
-            <Box className={classes.box}>
-                <SvgIcon className={classes.icon} component={props.icon}/>
-                <Typography className={classes.text} variant="h4">{props.title}</Typography>
-            </Box>
-        </Card></Link>
+    const card = <Card className={classes.card}>
+        <Box className={classes.box}>
+            <SvgIcon className={classes.icon} component={props.icon}/>
+            <Typography className={classes.text} variant="h4">{props.title}</Typography>
+        </Box>
+    </Card>
+
+    return props.to.indexOf("http") >= 0 ? <a href={props.to} className={classes.link}>{card}</a> :
+        <Link to={props.to} className={classes.link}>{card}</Link>
 }
