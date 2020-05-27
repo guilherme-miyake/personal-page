@@ -24,12 +24,16 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "space-evenly"
     },
     link: {
-        width: "31%",
-        [theme.breakpoints.down("sm")]:{width: "40%"},
-        [theme.breakpoints.down("xs")]:{width: "100%"},
+        width: "calc(100%/3 - 15px)",
+        [theme.breakpoints.down("sm")]: {
+            width: "calc(100%/2 - 10px)",
+        },
+        [theme.breakpoints.down("xs")]: {
+            width: "100%",
+        },
+        margin: "5px 5px",
         minWidth: "200px",
         height: "300px",
-        margin: "5px 5px",
         textDecoration: "none"
     },
     text: {

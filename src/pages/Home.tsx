@@ -5,6 +5,7 @@ import {Assignment, Casino, GitHub, LinkedIn, ListAlt, Menu, Person} from "@mate
 import HomeLink from "../components/HomeLink";
 import {Box} from "@material-ui/core";
 import makeStyles from "@material-ui/core/styles/makeStyles";
+import {Translation} from "../locales";
 
 const useStyles = makeStyles(() => ({
         links: {
@@ -17,7 +18,7 @@ const useStyles = makeStyles(() => ({
 ));
 
 export default function Home() {
-    const text = useText()
+    const text = useText<Translation["Home"]>("Home")
     const classes = useStyles()
 
     return <Fragment>

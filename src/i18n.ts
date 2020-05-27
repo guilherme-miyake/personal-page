@@ -1,24 +1,20 @@
-import i18n from "i18next";
+import i18n, {InitOptions} from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
-import {English} from "./locales/English";
-import {Portuguese} from "./locales/Portuguese";
+import English from "./locales/English";
+import Portuguese from "./locales/Portuguese";
 
 i18n.use(LanguageDetector).init({
     // we init with resources
     resources: {
-        US: {
-            translations: English
-        },
-        BR: {
-            translations: Portuguese
-        }
+        US: English,
+        BR: Portuguese
     },
     fallbackLng: "US",
     debug: true,
 
     // have a common namespace used around the full app
-    ns: ["translations"],
-    defaultNS: "translations",
+    ns: Object.keys(English),
+    defaultNS: "Home",
 
     keySeparator: false, // we use content as keys
 
@@ -30,6 +26,6 @@ i18n.use(LanguageDetector).init({
     react: {
         wait: true
     }
-});
+} as InitOptions);
 
 export default i18n;

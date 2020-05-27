@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, {Fragment} from "react";
 import {Typography} from "@material-ui/core";
 import Container from "@material-ui/core/Container";
 import makeStyles from "@material-ui/core/styles/makeStyles";
@@ -7,6 +7,7 @@ import useText from "../hooks/useText";
 import DynamicBreadcrumbs from "./DynamicBreadcrumbs";
 import LanguageController from "./LanguageController";
 import Paper from "@material-ui/core/Paper";
+import {Translation} from "../locales";
 
 const useStyles = makeStyles((theme) => ({
     header: {
@@ -28,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Header() {
-    const text = useText()
+    const text = useText<Translation["Home"]>("Home")
     const theme = useTheme()
     const classes = useStyles(theme)
     return <Fragment>

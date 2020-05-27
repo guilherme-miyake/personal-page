@@ -25,12 +25,16 @@ const useStyles = makeStyles((fit?: boolean) => ({
     }
 }));
 
-export default function SectionItem(props: { title?: string, children: ReactNode, noPaper?: boolean, fit?: boolean }) {
+export default function SectionItem(props: { title?: string, children?: ReactNode, noPaper?: boolean, fit?: boolean, textArray?: string[] }) {
     const classes = useStyles(props.fit)
     const boxElement = <Box className={classes.box}>
         {props.title ? <Typography variant={"h5"}>{props.title}</Typography> : null}
         {props.title ? <Divider className={classes.divider}/> : null}
-        {props.children}
+
+        {props.children ? props.children : null}
+
+        {props.textArray ? props.textArray.map((text) => <Typography variant={"h5"}
+                                                                     paragraph>{text}</Typography>) : null}
     </Box>
     return props.noPaper ? <Box className={classes.paper}>{boxElement}</Box> :
         <Paper elevation={3} className={classes.paper}>{boxElement}</Paper>

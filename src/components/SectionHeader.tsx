@@ -14,12 +14,12 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: "row",
         alignItems: "flex-end",
         display: 'flex',
-        margin: "2px 0px"
+        margin: "2px 0px",
     },
-    text:{
+    text: {
         margin: "0px 0px 10px 0px"
     },
-    icon:{
+    icon: {
         fontSize: "80px",
         margin: "0px 10px 0px 0px"
     },
@@ -33,14 +33,14 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function SectionHeader(props: { title: string, icon: SvgIconComponent}) {
+export default function SectionHeader(props: { title: string, icon: SvgIconComponent }) {
     const theme = useTheme()
     const classes = useStyles(theme)
 
     return <Fragment>
         <Container className={classes.title}>
             <SvgIcon className={classes.icon} component={props.icon}/>
-            <Typography className={classes.text}  variant="h4">{props.title}</Typography>
+            <Typography className={classes.text} variant="h4">{props.title}</Typography>
         </Container>
         <div className={classes.line}/>
     </Fragment>
