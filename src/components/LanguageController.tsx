@@ -9,6 +9,7 @@ const useStyle = makeStyles((theme) => ({
     select: {
         backgroundColor: theme.palette.background.paper,
         color: theme.palette.text.primary,
+        height: "max-content",
         padding: "7px",
         borderRadius: "5px",
         "& *":{
@@ -23,6 +24,7 @@ export default function LanguageController() {
     const classes = useStyle(theme)
     const {i18n} = useTranslation()
     const onChangeLanguage = (country: string) => i18n.changeLanguage(country)
+
     return <ReactFlagsSelect
         className={classes.select}
         countries={["US", "BR"]}

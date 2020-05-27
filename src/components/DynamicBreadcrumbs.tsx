@@ -15,18 +15,18 @@ function formatLink(path: String) {
     return path.charAt(0).toUpperCase() + path.slice(1);
 }
 
-function Breadcrumb(props: { pathArray: string[], index: number, pathValue: string }) {
+function Breadcrumb(props: { pathArray: string[], index: number, pathValue: string}) {
     const classes = useStyle()
     const last = props.index === props.pathArray.length - 1;
     const to = "/" + props.pathArray.slice(0, props.index + 1).join('/');
 
     return last ? (
-        <Typography variant={textVariant} color="textPrimary" key={to}>
+        <Typography variant={textVariant} color="textPrimary">
             {formatLink(props.pathValue)}
         </Typography>
     ) : (
-        <Link className={classes.link} color="inherit" to={to} key={to}>
-            <Typography variant={textVariant} color="textPrimary" key={to}>
+        <Link className={classes.link} color="inherit" to={to}>
+            <Typography variant={textVariant} color="textPrimary">
                 {formatLink(props.pathValue)}
             </Typography>
         </Link>
@@ -44,7 +44,7 @@ export default function DynamicBreadcrumbs() {
 
         {
             pathArray.map((value, index) => {
-                    return <Breadcrumb pathValue={value} index={index} pathArray={pathArray}/>
+                    return <Breadcrumb pathValue={value} index={index} pathArray={pathArray} key={value}/>
                 }
             )
         }

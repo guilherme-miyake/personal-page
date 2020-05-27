@@ -1,4 +1,5 @@
 import {createMuiTheme, ThemeProvider} from "@material-ui/core/styles";
+import responsiveFontSizes from "@material-ui/core/styles/responsiveFontSizes";
 import {createBrowserHistory} from "history";
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -8,7 +9,7 @@ import App from './App.tsx';
 import i18n from "./i18n";
 import './index.css';
 
-const theme = createMuiTheme({
+let theme = createMuiTheme({
     palette: {
         type: 'dark',
         primary: {
@@ -25,7 +26,7 @@ const theme = createMuiTheme({
         },
     },
 });
-
+theme = responsiveFontSizes(theme)
 const history = createBrowserHistory();
 
 ReactDOM.render(

@@ -6,7 +6,7 @@ import useTheme from "@material-ui/core/styles/useTheme";
 import useText from "../hooks/useText";
 import DynamicBreadcrumbs from "./DynamicBreadcrumbs";
 import LanguageController from "./LanguageController";
-import Card from "@material-ui/core/Card";
+import Paper from "@material-ui/core/Paper";
 
 const useStyles = makeStyles((theme) => ({
     header: {
@@ -36,9 +36,9 @@ export default function Header() {
             <DynamicBreadcrumbs/>
             <LanguageController/>
         </Container>
-        <Card className={classes.header}>
+        <Paper elevation={3} className={classes.header}>
             <Typography variant="h3">Guilherme Toshio Miyake</Typography>
             <Typography variant="h5">{text("Job Title")}</Typography>
-        </Card>
+        </Paper>
     </Fragment>
 }

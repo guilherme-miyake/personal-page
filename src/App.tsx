@@ -6,6 +6,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Header from "./components/Header";
 import Projects from "./pages/Projects";
 import Home from "./pages/Home";
+import About from "./pages/About";
 
 const useStyles = makeStyles(() => ({
     app: {
@@ -25,6 +26,9 @@ function App() {
                 <Switch>
                     <Route exact path="/">
                         <Home/>
+                    </Route>
+                    <Route exact path="/about">
+                        <About/>
                     </Route>
                     <Route path="/projects/:tag">
                         <Projects/>

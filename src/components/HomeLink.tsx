@@ -6,8 +6,9 @@ import SvgIcon from "@material-ui/core/SvgIcon";
 import {SvgIconComponent} from "@material-ui/icons";
 import Box from "@material-ui/core/Box";
 import {Link} from "react-router-dom";
+import useTheme from "@material-ui/core/styles/useTheme";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
     card: {
         width: "100%",
         height: "100%",
@@ -23,10 +24,12 @@ const useStyles = makeStyles(() => ({
         justifyContent: "space-evenly"
     },
     link: {
-        width: "30%",
-        minWidth: "300px",
+        width: "31%",
+        [theme.breakpoints.down("sm")]:{width: "40%"},
+        [theme.breakpoints.down("xs")]:{width: "100%"},
+        minWidth: "200px",
         height: "300px",
-        margin: "10px 10px",
+        margin: "5px 5px",
         textDecoration: "none"
     },
     text: {
@@ -42,7 +45,8 @@ const useStyles = makeStyles(() => ({
 }));
 
 export default function HomeLink(props: { title: string, to: string, icon: SvgIconComponent }) {
-    const classes = useStyles()
+    const theme = useTheme()
+    const classes = useStyles(theme)
     const card = <Card className={classes.card}>
         <Box className={classes.box}>
             <SvgIcon className={classes.icon} component={props.icon}/>

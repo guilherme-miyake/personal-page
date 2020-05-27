@@ -42,6 +42,6 @@ export default function SectionHeader(props: { title: string, icon: SvgIconCompo
             <SvgIcon className={classes.icon} component={props.icon}/>
             <Typography className={classes.text}  variant="h4">{props.title}</Typography>
         </Container>
-        <Container className={classes.line}/>
+        <div className={classes.line}/>
     </Fragment>
 }
