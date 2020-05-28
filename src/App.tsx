@@ -17,22 +17,23 @@ const useStyles = makeStyles(() => ({
         flexDirection: "column",
         padding: "10px",
         justifyContent: 'center',
+        zIndex: 2
     },
     background: {
         height: "100%",
-        // minHeight: "1300px",
         width: "100%",
         backgroundImage: `url(${background})`,
-        backgroundAttachment: "scroll",
+        backgroundAttachment: "fixed",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        backgroundPosition: "bottom"
+        backgroundPosition: "bottom",
+        zIndex: 0
     },
     background_credits: {
-        display: "flex",
-        justifyContent: "flex-end",
-        alignItems: "flex-end",
-        height: "300px"
+        position: "fixed",
+        right: "10px",
+        bottom: "10px",
+        zIndex: -1
     }
 }));
 
@@ -53,10 +54,11 @@ function App() {
                         <Projects/>
                     </Route>
                 </Switch>
-                <Box className={classes.background_credits}>
-                    <Typography>Photo by Mahkeo on Unsplash</Typography>
-                </Box>
             </Container>
+            <Box height={"30px"}/>
+            <Box className={classes.background_credits}>
+                <Typography>Photo by Mahkeo on Unsplash</Typography>
+            </Box>
         </div>
     );
 }

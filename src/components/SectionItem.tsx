@@ -20,16 +20,17 @@ const useStyles = makeStyles(() => (
             flexDirection: "column",
             display: 'flex',
             margin: "10px",
+            width: "100%"
         },
         divider: {
             margin: "0px 0px 10px 0px"
         }
     }));
 
-export default function SectionItem(props: { title?: string, children?: ReactNode, fit?: boolean, textArray?: string[] }) {
+export default function SectionItem(props: { title?: string, children?: ReactNode, textArray?: string[] }) {
     const classes = useStyles()
     return <Paper elevation={3} className={classes.paper}>
-        <Box className={classes.box} width={props.fit ? "max-content" : "100%"}>
+        <Box className={classes.box}>
             {props.title ? <Typography variant={"h5"}>{props.title}</Typography> : null}
             {props.title ? <Divider className={classes.divider}/> : null}
 

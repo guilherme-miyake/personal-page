@@ -47,15 +47,15 @@ export default function About() {
 
     return <Fragment>
 
-        <Box padding={"10px 0px"} alignSelf={"flex-end"}>
+        <SectionHeader title={"Bio"} icon={Person}/>
+
+        <SectionItem textArray={bio}/>
+        <Box alignSelf={"flex-end"} padding="0px 10px">
             <Button color={"primary"} variant={"contained"} to={"/resume"} component={Link}>
                 {text("go to resume 0")}<br/>{text("go to resume 1")}
             </Button>
         </Box>
 
-        <SectionHeader title={"Bio"} icon={Person}/>
-
-        <SectionItem textArray={bio}/>
 
         <PhotoSection>
             <br/>
@@ -70,7 +70,7 @@ export default function About() {
 
         <SectionHeader title={text("contact")} icon={Call}/>
         <Box display={"flex"} flexDirection={"row"} alignItems={"flex-start"} flexWrap={"wrap"} overflow={"hidden"}>
-            <Box display={"flex"} flexDirection={"column"} width={"calc(100%/3 - 10px)"} minWidth={"500px"}
+            <Box display={"flex"} flexDirection={"column"} width={"calc(100%/3 - 10px)"} minWidth={"450px"}
                  maxWidth={"100%"}>
                 <Phone/>
                 <Steam/>
