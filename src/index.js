@@ -11,6 +11,15 @@ import i18n from "./i18n";
 import './index.css';
 
 let theme = createMuiTheme({
+    breakpoints: {
+        values: {
+            xs: 0,
+            sm: 650,
+            md: 860,
+            lg: 1280,
+            xl: 1920,
+        },
+    },
     palette: {
         type: 'dark',
         primary: {

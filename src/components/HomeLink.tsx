@@ -20,6 +20,8 @@ const useStyles = makeStyles((theme) => ({
     },
     box: {
         display: "flex",
+        width: "100%",
+        height: "100%",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "space-evenly"
@@ -40,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     text: {
         textAlign: "center",
         wordWrap: "normal",
-        width: "calc(100% - 10px)",
+        width: "70%",
     },
     icon: {
         fontSize: "120px",
