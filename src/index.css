@@ -3,7 +3,6 @@ body {
   width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
-
 }
 
 code {
@@ -11,15 +10,10 @@ code {
     monospace;
 }
 
-html {
+html, #root {
   margin: 0;
   height: 100%;
   width: 100%;
-}
-
-#root {
-  height: 100%;
-  display: flex;
 }
 
 ::-moz-viewport-scroll ::-webkit-scrollbar {

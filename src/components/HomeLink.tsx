@@ -15,7 +15,8 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "space-around"
+        justifyContent: "space-around",
+        padding: "10px"
     },
     box: {
         display: "flex",
@@ -29,17 +30,21 @@ const useStyles = makeStyles((theme) => ({
             width: "calc(100%/2 - 10px)",
         },
         [theme.breakpoints.down("xs")]: {
-            width: "100%",
+            // width: "100%",
+            width: "calc(100%/2 - 10px)",
+            minHeight: "200px",
         },
         margin: "5px 5px",
-        minWidth: "200px",
-        height: "300px",
+        minHeight: "300px",
         textDecoration: "none"
     },
     text: {
         textAlign: "center",
         wordWrap: "normal",
-        width: "240px"
+        width: "240px",
+        [theme.breakpoints.down("xs")]: {
+            width: "calc(100% - 10px)"
+        },
         // margin: "0px 0px 10px 0px"
     },
     icon: {

@@ -1,6 +1,6 @@
 import React, {Fragment} from "react";
 import SectionHeader from "../components/SectionHeader";
-import {Call, LiveHelp, Person} from "@material-ui/icons";
+import {Call, Person, QuestionAnswer} from "@material-ui/icons";
 import PhotoSection from "../components/PhotoSection";
 import SectionItem from "../components/SectionItem";
 import Box from "@material-ui/core/Box";
@@ -63,7 +63,7 @@ export default function About() {
             <Typography variant={"h6"} align={"right"}>{text("the zen of python footer")}</Typography>
         </PhotoSection>
 
-        <SectionHeader title={"FAQ"} icon={LiveHelp}/>
+        <SectionHeader title={"FAQ"} icon={QuestionAnswer}/>
         <SectionItem title={text("hobbies title")} textArray={hobbies}/>
         <SectionItem title={text("software title")} textArray={software}/>
         <SectionItem title={text("degree title")} textArray={degree}/>

@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: "10px"
     },
     nav: {
-        display:"flex",
+        margin: "5px 0px 0px 0px",
+        display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
