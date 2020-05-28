@@ -1,6 +1,6 @@
 import React, {Fragment} from "react";
 import SectionHeader from "../components/SectionHeader";
-import {Call, Person, QuestionAnswer} from "@material-ui/icons";
+import {AlternateEmail, ChevronRight, Person, QuestionAnswer} from "@material-ui/icons";
 import PhotoSection from "../components/PhotoSection";
 import SectionItem from "../components/SectionItem";
 import Box from "@material-ui/core/Box";
@@ -51,7 +51,7 @@ export default function About() {
 
         <SectionItem textArray={bio}/>
         <Box alignSelf={"flex-end"} padding="0px 10px">
-            <Button color={"primary"} variant={"contained"} to={"/resume"} component={Link}>
+            <Button color={"primary"} variant={"contained"} to={"/resume"} component={Link} endIcon={<ChevronRight/>}>
                 {text("go to resume 0")}<br/>{text("go to resume 1")}
             </Button>
         </Box>
@@ -68,7 +68,7 @@ export default function About() {
         <SectionItem title={text("software title")} textArray={software}/>
         <SectionItem title={text("degree title")} textArray={degree}/>
 
-        <SectionHeader title={text("contact")} icon={Call}/>
+        <SectionHeader title={text("contact")} icon={AlternateEmail}/>
         <Box display={"flex"} flexDirection={"row"} alignItems={"flex-start"} flexWrap={"wrap"} overflow={"hidden"}>
             <Box display={"flex"} flexDirection={"column"} width={"calc(100%/3 - 10px)"} minWidth={"450px"}
                  maxWidth={"100%"}>

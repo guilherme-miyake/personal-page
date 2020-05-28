@@ -58,7 +58,7 @@ function App() {
                     <Route exact path="/about">
                         <About/>
                     </Route>
-                    <Route path="/projects/:tag">
+                    <Route path={["/projects/:tag", "/projects"]}>
                         <Projects/>
                     </Route>
                     <Route path="/resume">

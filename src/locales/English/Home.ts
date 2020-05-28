@@ -4,5 +4,5 @@ export const Home = {
     "resume": "Resume",
     "projects": "Projects",
     "repo link": "This Page Repository",
-    "tdb link": `RPG WebApp (In Progress...)`
+    "tdb link": `RPG WebApp (WIP)`
 }

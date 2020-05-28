@@ -1,6 +1,6 @@
 export const About = {
     "go to resume 0": "Looking for my professional profile?",
-    "go to resume 1": "Go to my resume >>>",
+    "go to resume 1": "Go to my resume",
 
     "bio title": `Bio`,
     "bio text 0": `Brazilian born and raised, I got a degree in Civil Engineering, but started working with software
@@ -17,7 +17,7 @@ export const About = {
     "the zen of python 4": "In the face of ambiguity, refuse the temptation to guess.",
     "the zen of python 5": "Now is better than never.",
     "the zen of python 6": "Although never is often better than *right* now.",
-    "the zen of python footer": "- My favorites parts of The Zen of Python",
+    "the zen of python footer": "- The Zen of Python (Redacted)",
 
     "hobbies title": `What are my hobbies?`,
     "hobbies text 0": `I love to play all kind of games, ranging from tabletop RPG to action

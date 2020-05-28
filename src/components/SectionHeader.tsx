@@ -21,6 +21,12 @@ const useStyles = makeStyles((theme) => ({
     },
     icon: {
         fontSize: "80px",
+        [theme.breakpoints.down("sm")]: {
+            fontSize: "65px",
+        },
+        [theme.breakpoints.down("xs")]: {
+            fontSize: "50px",
+        },
         margin: "0px 10px 0px 0px"
     },
     line: {

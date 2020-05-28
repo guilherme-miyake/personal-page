@@ -30,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
             width: "calc(100%/2 - 10px)",
         },
         [theme.breakpoints.down("xs")]: {
-            // width: "100%",
             width: "calc(100%/2 - 10px)",
             minHeight: "200px",
         },
@@ -41,10 +40,7 @@ const useStyles = makeStyles((theme) => ({
     text: {
         textAlign: "center",
         wordWrap: "normal",
-        width: "240px",
-        [theme.breakpoints.down("xs")]: {
-            width: "calc(100% - 10px)"
-        },
+        width: "calc(100% - 10px)",
     },
     icon: {
         fontSize: "120px",
