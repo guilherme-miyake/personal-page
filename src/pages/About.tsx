@@ -33,7 +33,7 @@ export default function About() {
     const hobbies = [
         text("hobbies text 0"),
         text("hobbies text 1"),
-        text("hobbies text 1")
+        text("hobbies text 2")
     ]
     const software = [
         text("software text 0"),
@@ -41,40 +41,46 @@ export default function About() {
     ]
     const degree = [
         text("degree text 0"),
-        text("degree text 1")
+        text("degree text 1"),
+        text("degree text 2")
     ]
 
     return <Fragment>
 
         <Box padding={"10px 0px"} alignSelf={"flex-end"}>
             <Button color={"primary"} variant={"contained"} to={"/resume"} component={Link}>
-                {"Looking for my professional profile?"}<br/>{"Go to my resume >>>"}
+                {text("go to resume 0")}<br/>{text("go to resume 1")}
             </Button>
         </Box>
 
         <SectionHeader title={"Bio"} icon={Person}/>
 
-        <SectionItem noPaper textArray={bio}/>
+        <SectionItem textArray={bio}/>
 
         <PhotoSection>
             <br/>
-            {tzp.map((text) => <Typography variant={"h5"}>{text}</Typography>)}
-            <Typography variant={"h6"} align={"right"}>My favorites parts of The Zen of Python</Typography>
+            {tzp.map((text, index) => <Typography key={index} variant={"h5"}>{text}</Typography>)}
+            <Typography variant={"h6"} align={"right"}>{text("the zen of python footer")}</Typography>
         </PhotoSection>
 
         <SectionHeader title={"FAQ"} icon={LiveHelp}/>
-        <SectionItem title={"What are my hobbies?"} noPaper textArray={hobbies}/>
-        <SectionItem title={"Why do you work in Software Development?"} textArray={software}/>
-        <SectionItem title={"What about your degree in Civil Engineering?"} noPaper textArray={degree}/>
+        <SectionItem title={text("hobbies title")} textArray={hobbies}/>
+        <SectionItem title={text("software title")} textArray={software}/>
+        <SectionItem title={text("degree title")} textArray={degree}/>
 
-        <SectionHeader title={"Where to find me?"} icon={Call}/>
+        <SectionHeader title={text("contact")} icon={Call}/>
         <Box display={"flex"} flexDirection={"row"} alignItems={"flex-start"} flexWrap={"wrap"} overflow={"hidden"}>
-            <Box display={"flex"} flexDirection={"column"}>
+            <Box display={"flex"} flexDirection={"column"} width={"calc(100%/3 - 10px)"} minWidth={"500px"}
+                 maxWidth={"100%"}>
                 <Phone/>
                 <Steam/>
             </Box>
-            <Linkedin/>
-            <Box display={"flex"} flexDirection={"column"}>
+            <Box display={"flex"} flexDirection={"column"} width={"calc(50% - 260px)"} minWidth={"350px"}
+                 maxWidth={"100%"}>
+                <Linkedin/>
+            </Box>
+            <Box display={"flex"} flexDirection={"column"} width={"calc(50% - 260px)"} minWidth={"350px"}
+                 maxWidth={"100%"}>
                 <GitHub/>
             </Box>
         </Box>

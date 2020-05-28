@@ -1,3 +1,4 @@
+import CssBaseline from "@material-ui/core/CssBaseline";
 import {createMuiTheme, ThemeProvider} from "@material-ui/core/styles";
 import responsiveFontSizes from "@material-ui/core/styles/responsiveFontSizes";
 import {createBrowserHistory} from "history";
@@ -33,6 +34,7 @@ ReactDOM.render(
     <React.StrictMode>
         <I18nextProvider i18n={i18n}>
             <ThemeProvider theme={theme}>
+                <CssBaseline/>
                 <Router history={history}>
                     <App/>
                 </Router>

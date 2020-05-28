@@ -1,6 +1,5 @@
 import React, {Fragment} from "react";
 import {Typography} from "@material-ui/core";
-import Container from "@material-ui/core/Container";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import useTheme from "@material-ui/core/styles/useTheme";
 import useText from "../hooks/useText";
@@ -8,6 +7,7 @@ import DynamicBreadcrumbs from "./DynamicBreadcrumbs";
 import LanguageController from "./LanguageController";
 import Paper from "@material-ui/core/Paper";
 import {Translation} from "../locales";
+import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles((theme) => ({
     header: {
@@ -33,10 +33,10 @@ export default function Header() {
     const theme = useTheme()
     const classes = useStyles(theme)
     return <Fragment>
-        <Container className={classes.nav}>
+        <Box className={classes.nav}>
             <DynamicBreadcrumbs/>
             <LanguageController/>
-        </Container>
+        </Box>
         <Paper elevation={3} className={classes.header}>
             <Typography variant="h3">Guilherme Toshio Miyake</Typography>
             <Typography variant="h5">{text("Job Title")}</Typography>
