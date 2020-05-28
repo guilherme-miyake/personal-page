@@ -45,11 +45,13 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("xs")]: {
             width: "calc(100% - 10px)"
         },
-        // margin: "0px 0px 10px 0px"
     },
     icon: {
         fontSize: "120px",
-        margin: "15px"
+        margin: "15px",
+        [theme.breakpoints.down("xs")]: {
+            fontSize: "80px",
+        }
     },
 }));
 
