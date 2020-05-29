@@ -1,7 +1,10 @@
-import React, {ReactNode} from "react";
+import React from "react";
 import Container from "@material-ui/core/Container";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import {Box} from "@material-ui/core";
+import Typography from "@material-ui/core/Typography";
+import useText from "../hooks/useText";
+import {Translation} from "../locales";
 
 const useStyles = makeStyles(() => ({
     box: {
@@ -17,15 +20,46 @@ const useStyles = makeStyles(() => ({
         width: "300px",
         height: "300px",
         borderRadius: "30px"
+    },
+    zen: {
+        textShadow: "2px 2px 3px black"
     }
 }));
 
-export default function PhotoSection(props: { children: ReactNode }) {
+export default function PhotoSection() {
     const classes = useStyles()
+    const text = useText<Translation["About"]>("About")
+
+    const tzp = [
+        text("the zen of python 0"),
+        text("the zen of python 1"),
+        text("the zen of python 2"),
+        text("the zen of python 3"),
+        text("the zen of python 4"),
+        text("the zen of python 5"),
+        text("the zen of python 6"),
+    ]
+
     return <Container className={classes.box}>
         <img className={classes.photo} src={"https://picsum.photos/300/300"} alt={"Guilherme Toshio Miyake"}/>
         <Box flexGrow={2} minWidth={"300px"} m={"10px 10px"}>
-            {props.children}
+            <br/>
+            {tzp.map((text, index) => {
+                return <Typography
+                    className={classes.zen}
+                    key={index}
+                    variant={"h5"}
+                >
+                    {text}
+                </Typography>
+            })}
+            <Typography
+                className={classes.zen}
+                variant={"h6"}
+                align={"right"}
+            >
+                {text("the zen of python footer")}
+            </Typography>
         </Box>
     </Container>
 }

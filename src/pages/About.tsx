@@ -4,7 +4,6 @@ import {AlternateEmail, ChevronRight, Person, QuestionAnswer} from "@material-ui
 import PhotoSection from "../components/PhotoSection";
 import SectionItem from "../components/SectionItem";
 import Box from "@material-ui/core/Box";
-import Typography from "@material-ui/core/Typography";
 import {Link} from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import Linkedin from "../components/contactBadges/Linkedin";
@@ -21,15 +20,6 @@ export default function About() {
         text("bio text 1")
     ]
 
-    const tzp = [
-        text("the zen of python 0"),
-        text("the zen of python 1"),
-        text("the zen of python 2"),
-        text("the zen of python 3"),
-        text("the zen of python 4"),
-        text("the zen of python 5"),
-        text("the zen of python 6"),
-    ]
     const hobbies = [
         text("hobbies text 0"),
         text("hobbies text 1"),
@@ -57,11 +47,7 @@ export default function About() {
         </Box>
 
 
-        <PhotoSection>
-            <br/>
-            {tzp.map((text, index) => <Typography key={index} variant={"h5"}>{text}</Typography>)}
-            <Typography variant={"h6"} align={"right"}>{text("the zen of python footer")}</Typography>
-        </PhotoSection>
+        <PhotoSection/>
 
         <SectionHeader title={"FAQ"} icon={QuestionAnswer}/>
         <SectionItem title={text("hobbies title")} textArray={hobbies}/>
