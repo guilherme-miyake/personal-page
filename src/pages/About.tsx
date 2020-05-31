@@ -1,24 +1,19 @@
 import React, {Fragment} from "react";
+import {AlternateEmail, QuestionAnswer} from "@material-ui/icons";
 import SectionHeader from "../components/SectionHeader";
-import {AlternateEmail, ChevronRight, Person, QuestionAnswer} from "@material-ui/icons";
-import PhotoSection from "../components/PhotoSection";
 import SectionItem from "../components/SectionItem";
 import Box from "@material-ui/core/Box";
-import {Link} from "react-router-dom";
-import Button from "@material-ui/core/Button";
 import Linkedin from "../components/contactBadges/Linkedin";
 import GitHub from "../components/contactBadges/Github";
 import Steam from "../components/contactBadges/Steam";
 import Phone from "../components/contactBadges/Phone";
 import useText from "../hooks/useText";
 import {Translation} from "../locales";
+import ResumeSummarySection from "../components/ResumeSummarySection";
+import AboutPhotoSection from "../components/AboutPhotoSection";
 
 export default function About() {
     const text = useText<Translation["About"]>("About")
-    const bio = [
-        text("bio text 0"),
-        text("bio text 1")
-    ]
 
     const hobbies = [
         text("hobbies text 0"),
@@ -37,17 +32,8 @@ export default function About() {
 
     return <Fragment>
 
-        <SectionHeader title={"Bio"} icon={Person}/>
-
-        <SectionItem textArray={bio}/>
-        <Box alignSelf={"flex-end"} padding="0px 10px">
-            <Button color={"primary"} variant={"contained"} to={"/resume"} component={Link} endIcon={<ChevronRight/>}>
-                {text("go to resume 0")}<br/>{text("go to resume 1")}
-            </Button>
-        </Box>
-
-
-        <PhotoSection/>
+        <ResumeSummarySection startingVersion={0}/>
+        <AboutPhotoSection/>
 
         <SectionHeader title={"FAQ"} icon={QuestionAnswer}/>
         <SectionItem title={text("hobbies title")} textArray={hobbies}/>
