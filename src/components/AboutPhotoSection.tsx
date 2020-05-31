@@ -26,7 +26,7 @@ const useStyles = makeStyles(() => ({
     }
 }));
 
-export default function PhotoSection() {
+export default function AboutPhotoSection() {
     const classes = useStyles()
     const text = useText<Translation["About"]>("About")
 
