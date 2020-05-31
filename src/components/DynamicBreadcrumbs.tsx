@@ -7,12 +7,16 @@ import makeStyles from "@material-ui/core/styles/makeStyles";
 const textVariant = "h5"
 const useStyle = makeStyles(() => ({
     link: {
-        textDecoration: "none"
+        textDecoration: "none",
     }
 }))
 
-function formatLink(path: String) {
-    return path.charAt(0).toUpperCase() + path.slice(1);
+export function formatName(path: String) {
+    const clean = path
+        .split("-")[0]
+        .split("+").join(" ")
+        .split("_").join("-")
+    return clean.charAt(0).toUpperCase() + clean.slice(1);
 }
 
 function Breadcrumb(props: { pathArray: string[], index: number, pathValue: string}) {
@@ -21,13 +25,13 @@ function Breadcrumb(props: { pathArray: string[], index: number, pathValue: stri
     const to = "/" + props.pathArray.slice(0, props.index + 1).join('/');
 
     return last ? (
-        <Typography variant={textVariant} color="textPrimary">
-            {formatLink(props.pathValue)}
+        <Typography variant={textVariant} color="textPrimary" style={{textTransform: "capitalize"}}>
+            {formatName(props.pathValue)}
         </Typography>
     ) : (
         <Link className={classes.link} color="inherit" to={to}>
-            <Typography variant={textVariant} color="textPrimary">
-                {formatLink(props.pathValue)}
+            <Typography variant={textVariant} color="textPrimary" style={{textTransform: "capitalize"}}>
+                {formatName(props.pathValue)}
             </Typography>
         </Link>
     )
