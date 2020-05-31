@@ -29,7 +29,7 @@ export default function Home() {
             <HomeLink to="/projects" title={text("projects")} icon={ListAlt}/>
             <HomeLink to="https://www.linkedin.com/in/guilhermemiyake/" title={"LinkedIn"} icon={LinkedIn}/>
             <HomeLink to="https://github.com/guilherme-miyake/personal-page" title={text("repo link")} icon={GitHub}/>
-            <HomeLink to="https://thedungeonbackstage.com" title={text("tdb link")} icon={Casino}/>
+            <HomeLink to="https://dungeonbackstage.com" title={text("tdb link")} icon={Casino}/>
         </Box>
     </Fragment>
 }
