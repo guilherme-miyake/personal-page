@@ -1,10 +1,8 @@
-import {Translation} from "../index";
-
-export const Home: Translation["Home"] = {
-    "Job Title": "Engenheiro de Software • Engenheiro de Dados • Engenheiro Civil",
-    "about": "Quem sou eu?",
-    "resume": "Currículo",
-    "projects": "Projetos",
-    "repo link": "Repositório desta Pagina",
-    "tdb link": "App de RPG (Construindo...)"
-};
+export const Home = {
+    "Job Title": "Software Engineer • Data Engineer • Civil Engineer",
+    "about": "About Me",
+    "resume": "Resume",
+    "projects": "Projects",
+    "repo link": "This Page Repository",
+    "tdb link": `RPG WebApp (WIP)`
+}

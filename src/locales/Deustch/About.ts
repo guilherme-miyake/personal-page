@@ -1,15 +1,4 @@
 export const About = {
-    "go to resume 0": "Looking for my professional profile?",
-    "go to resume 1": "Go to my resume >>>",
-
-    "bio title": `Bio`,
-    "bio text 0": `Brazilian born and raised, I got a degree in Civil Engineering, but started working with software
-    development at a start-up just as I was leaving college in 2017. I've learned much about programming ever since, and
-    even more about working together with people.`,
-    "bio text 1": `My areas of expertise are data engineering, back-end development, '90s jokes and references, lyrics of songs
-    I don't know, general trivia and information, failing and learning fast, dynamic reading and being a little too 
-    literal or concise at times.`,
-
     "the zen of python 0": "Beautiful is better than ugly. ",
     "the zen of python 1": "Explicit is better than implicit. ",
     "the zen of python 2": "Simple is better than complex. ",
@@ -17,7 +6,7 @@ export const About = {
     "the zen of python 4": "In the face of ambiguity, refuse the temptation to guess.",
     "the zen of python 5": "Now is better than never.",
     "the zen of python 6": "Although never is often better than *right* now.",
-    "the zen of python footer": "- My favorites parts of The Zen of Python",
+    "the zen of python footer": "- The Zen of Python (Redacted)",
 
     "hobbies title": `What are my hobbies?`,
     "hobbies text 0": `I love to play all kind of games, ranging from tabletop RPG to action
