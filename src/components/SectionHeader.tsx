@@ -17,7 +17,9 @@ const useStyles = makeStyles((theme) => ({
         margin: "2px 0px",
     },
     text: {
-        margin: "0px 0px 10px 0px"
+        margin: "0px 0px 10px 0px",
+        textTransform: "capitalize",
+        textShadow: "2px 2px 3px black"
     },
     icon: {
         fontSize: "80px",
@@ -27,7 +29,9 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("xs")]: {
             fontSize: "50px",
         },
-        margin: "0px 10px 0px 0px"
+        margin: "0px 10px 0px 0px",
+        textShadow: "2px 2px 3px black"
+
     },
     line: {
         backgroundColor: theme.palette.text.primary,
@@ -35,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
         height: "8px",
         padding: "0",
         borderRadius: "5px",
-        margin: "0px 0px 20px 0px"
+        margin: "0px 0px 20px 0px",
     }
 }));
 
