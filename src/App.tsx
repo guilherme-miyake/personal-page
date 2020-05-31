@@ -1,5 +1,5 @@
-import {Route, Switch} from "react-router-dom";
-import React, {Fragment} from 'react';
+import {Route, Switch, useLocation} from "react-router-dom";
+import React, {Fragment, useState} from 'react';
 import Container from "@material-ui/core/Container";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import Header from "./components/Header";
@@ -45,6 +45,13 @@ const useStyles = makeStyles(() => ({
 
 function App() {
     const classes = useStyles()
+    const location = useLocation()
+    const [previousLocation, setLocation] = useState(location.pathname)
+    if (location.pathname !== previousLocation) {
+        window.scrollTo(0, 0)
+        setLocation(location.pathname)
+    }
+
     return (
         <Fragment>
             <Box className={classes.background}>
