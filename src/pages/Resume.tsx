@@ -26,7 +26,7 @@ export default function Resume() {
         {
             Object.keys(workExperiences).map(
                 (key) =>
-                    <ExperienceSection experience={workExperiences[key]}/>)
+                    <ExperienceSection experience={workExperiences[key]} key={key}/>)
         }
         <SectionHeader title={text("skills title")} icon={PlaylistAddCheck}/>
         <AllSkillTags/>
@@ -34,7 +34,7 @@ export default function Resume() {
         {
             Object.keys(educationExperiences).map(
                 (key) =>
-                    <ExperienceSection experience={educationExperiences[key]}/>)
+                    <ExperienceSection experience={educationExperiences[key]} key={key}/>)
         }
         <SectionHeader title={text("personal title")} icon={EmojiObjects}/>
         <ProjectSection project={{
