@@ -40,16 +40,17 @@ export const projects: Project[] = [
     {
         title: "My Personal Webapp",
         purpose: ["is to have a showcase for both my experience and skills using an webpage interface"],
-        solution: ["have created a webpage using Typescript as the source language and React as the framework, " +
-        "I could give more details, but this is an axample",
-            `Erat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
-            nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit
-             esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur`],
-        contribution: ["was responsible to doing pretty much everything, but I need to test how this goes with" +
-        "longer text, so here comes some more latin"],
+        solution: [
+            "",
+        ],
         results: ["this super awesome webpage where you can read stuff about me and judge me based on things I wrote"],
-        skillStack: ['python-language', 'kotlin-language'],
-        experienceId: "software+engineer+@+creditas"
+        skillStack: [
+            "typescript-language",
+            "javascript-language",
+            "react-framework",
+            "firebase_apps-other"
+        ],
+        experienceId: ""
     },
     {
         title: "New Data Streaming Platform",
@@ -92,18 +93,75 @@ export const projects: Project[] = [
             "The main tool for the job at the time was Apache Airflow with most of our processing being done with SQL queries running on our AWS Redshift," +
             " that held both the raw data collected from multiple sources and our processed fact tables. "
         ],
-        results: ["a better experience for our users and a shift in skills and time spent from building SQL queries to actually" +
-        "looking at our data and using it, with a large expansion on our business analytics team that was made easier by our deliveries."],
+        results: [
+            "a better experience for our users and a shift in skills and time spent from building SQL queries to actually" +
+            "looking at our data and using it, with a large expansion on our business analytics team that was made easier by our deliveries."
+        ],
         skillStack: ["python-language", "airflow-tool", "redshift-tool"],
         experienceId: "software+engineer+@+creditas"
     },
     {
         title: "Operational Database Capture",
         purpose: [
-            ""
+            "was to capture data from operational databases and send it to our analytics environment."
         ],
         solution: [
-            ""
+            "we started using the AWS DMS Tool to make full loads from our productive RDS Postgres Databases straight to our AWS Redshift Cluster" +
+            "using scheduled jobs on Airflow, in order to ensure continuous data availability during the day we used staging schemas," +
+            " and cycled our schemas always keeping the last successful load on backup in case of failure.",
+            "Currently, we are still using the AWS DMS Tool, but instead of scheduled full loads targeting redshift," +
+            " we are using a continuous process that uses the Changelog Data Capture (CDC) feature to persist our data on S3." +
+            "In order to enable this new capture method, we added new default configurations to our databases on our terraform modules," +
+            "and enabled programmatic access to its root account user using AWS Secrets Manager to store the latest password and policies" +
+            "with resource tag conditions."
+        ],
+        results: [
+            "the Data Engineering team reduced the configuration and permission overhead to capture new databases," +
+            " and reduced the latency of the data moving from our operational environment to our analytics environment" +
+            " enabling even further deliveries."
+        ],
+        skillStack: [
+            "python-language",
+            "airflow-tool",
+            "terraform-tool",
+            "postgresql-tool",
+            "redshift-tool",
+            "aws_cloud-other"
+        ],
+        experienceId: "software+engineer+@+creditas"
+    },
+    {
+        title: "Near Real Time User Behavior Tracking",
+        purpose: [
+            "was to capture and deliver user behavior data in a sufficient speed for our marketing analysts to be able" +
+            " to take quick decisions and allow data science models to use and/or interact with our user accordingly to their browsing behavior."
+        ],
+        solution: [
+            "we had four main components that we had to customize and/or implement on our own infrastructure:",
+            "Google Tag Manager (generally known as GTM) and Snowplow Tracker, was a tool that we were already using to inject trackers and some other configurations on our web applications," +
+            " for this tool we wrote manuals to help a new user configure his GTM container to use our new system from scratch and also made an \"deployment-ready\"" +
+            " configuration that they could use to skip most of the manual steps.",
+            "Snowplow Collector and Enrich, both of them are mostly ready to use, for both of them we only had to tune and add some specific configuration to make it" +
+            " it run on our stack more smoothly, both of them were deployed using very high level terraform modules on ECS with high availability.",
+            "Snowplow Stream Avro, a simple spring based component that ran an subroutine responsible for converting the TSV-like messages that the Snowplow" +
+            " Enrich component outputted by default to our proper AVRO data-model and republished it to kafka to be made available to our analytics stack by default operations."
+        ],
+        skillStack: [
+            "javascript-language",
+            "spring-framework",
+            "kotlin-language",
+            "kafka-tool",
+            "terraform-tool",
+        ],
+        experienceId: "software+engineer+@+creditas"
+    },
+    {
+        title: "AWS Infrastructure and Permissions for Data Engineering",
+        purpose: [
+            "was to enable new projects and tools on AWS using infrastructure-as-code and to solve user access issues for the Data Engineering team"
+        ],
+        solution: [
+            "was broken down in three steps: new projects using IaC, bring old resources and tools into the new Infra, break down roles and grousps "
         ],
         contribution: [
             ""
@@ -112,41 +170,15 @@ export const projects: Project[] = [
         skillStack: [""],
         experienceId: "software+engineer+@+creditas"
     },
-    {
-        title: "User Behavior Tracking",
-        purpose: [
-            ""
-        ],
-        solution: [
-            ""
-        ],
-        contribution: [
-            ""
-        ],
-        results: [""],
-        skillStack: [""],
-        experienceId: "software+engineer+@+creditas"
-    },
-    {
-        title: "Data Visualization Tools Support and Maintenance",
-        purpose: [
-            ""
-        ],
-        solution: [
-            ""
-        ],
-        contribution: [
-            ""
-        ],
-        results: [""],
-        skillStack: [""],
-        experienceId: "software+engineer+@+creditas"
-    }
 
 ]
 
 
-// Database Capture
-// Atividades na SCD
-// Data Access Control and Security
-// Kafka Tools for monitoring and stuff
+// Kafka observability and control systems
+// Kafka and Analytics Control Center
+
+// Credit Analyzer
+// Loan contract generator
+// Basic Debt collection CRM
+// Real state evaluation system
+// Scheduled query pushing to Google Sheets
