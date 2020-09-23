@@ -10,7 +10,7 @@ export const frameworkTags = [
     "flask-framework",
     "django-framework",
     "spring-framework",
-    "react-framework",
+    "reactjs-framework",
     "pyqt-framework",
 ]
 
@@ -27,7 +27,6 @@ export const toolTags = [
 export const otherTags = [
     "firebase_apps-other",
     "aws_cloud-other",
-    "-other",
 ]
 
 export type allTags =
@@ -36,19 +35,25 @@ export type allTags =
     & typeof toolTags[number]
     & typeof otherTags[number]
 
+// The first project will be showcased in the Resume page under Personal Projects
 export const projects: Project[] = [
     {
         title: "My Personal Webapp",
         purpose: ["is to have a showcase for both my experience and skills using an webpage interface"],
         solution: [
-            "",
+            "I  managed to make some better choices on my stack and code organization, due to past experiences doing" +
+            " front-end for another project and some research on the subject.",
+            "As the main framework, ReactJS was chosen because I found it much easier and readable than its runner-ups " +
+            "(Angular and Flutter), and was the only framework I had had hands-on experience.",
+            "Typescript on the other hand, was chosen despite its challenges and overheads, because for each minute more" +
+            " I spent writing the code helped me save me dozens of minutes that I would otherwise have to spend" +
+            " debugging the application."
         ],
         results: ["this super awesome webpage where you can read stuff about me and judge me based on things I wrote"],
         skillStack: [
             "typescript-language",
             "javascript-language",
-            "react-framework",
-            "firebase_apps-other"
+            "reactjs-framework",
         ],
         experienceId: ""
     },
@@ -156,20 +161,36 @@ export const projects: Project[] = [
         experienceId: "software+engineer+@+creditas"
     },
     {
-        title: "AWS Infrastructure and Permissions for Data Engineering",
-        purpose: [
-            "was to enable new projects and tools on AWS using infrastructure-as-code and to solve user access issues for the Data Engineering team"
-        ],
+        title: "The Dungeon Backstage",
+        purpose: ["is to have a showcase for both my experience and skills using an webpage interface"],
         solution: [
-            "was broken down in three steps: new projects using IaC, bring old resources and tools into the new Infra, break down roles and grousps "
+            "I decided to go with ",
         ],
-        contribution: [
-            ""
+        results: ["this super awesome webpage where you can read stuff about me and judge me based on things I wrote"],
+        skillStack: [
+            "typescript-language",
+            "javascript-language",
+            "reactjs-framework",
+            "firebase_apps-other"
         ],
-        results: [""],
-        skillStack: [""],
-        experienceId: "software+engineer+@+creditas"
+        experienceId: ""
     },
+    // {
+    //     title: "AWS Infrastructure and Permissions for Data Engineering",
+    //     purpose: [
+    //         "was to enable new projects and tools on AWS using infrastructure-as-code (IaC) and to solve user access issues for the Data Engineering team"
+    //     ],
+    //     solution: [
+    //         "I started by learning how to configure and " +
+    //         "we had three targets: start all new projects using IaC, migrate old projects and resources created manually to IaC, break down roles and grousps "
+    //     ],
+    //     contribution: [
+    //         ""
+    //     ],
+    //     results: [""],
+    //     skillStack: [""],
+    //     experienceId: "software+engineer+@+creditas"
+    // },
 
 ]
 

@@ -9,6 +9,7 @@ import ExperienceSection from "../components/ExperienceSection";
 import {educationExperiences, workExperiences} from "../assets/experienceData";
 import {AllSkillTags} from "../components/SkillTag";
 import ProjectSection from "../components/ProjectSection";
+import {projects} from "../assets/projectsData";
 
 export default function Resume() {
     const text = useText<Translation["Resume"]>("Resume")
@@ -37,20 +38,7 @@ export default function Resume() {
                     <ExperienceSection experience={educationExperiences[key]} key={key}/>)
         }
         <SectionHeader title={text("personal title")} icon={EmojiObjects}/>
-        <ProjectSection project={{
-            title: "My Personal Webapp",
-            purpose: ["is to have a showcase for both my experience and skills using an webpage interface"],
-            solution: ["have created a webpage using Typescript as the source language and React as the framework, " +
-            "I could give more details, but this is an axample",
-                `Erat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
-            nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit
-             esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur`],
-            contribution: ["was responsible to doing pretty much everything, but I need to test how this goes with" +
-            "longer text, so here comes some more latin"],
-            results: ["this super awesome webpage where you can read stuff about me and judge me based on things I wrote"],
-            skillStack: ['python-language', 'kotlin-language'],
-        }}/>
-
+        <ProjectSection project={projects[0]}/>
         <SectionHeader title={text("language title")} icon={Language}/>
         <SectionItem textArray={languageText}/>
 
