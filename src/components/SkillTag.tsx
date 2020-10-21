@@ -13,7 +13,7 @@ import Container from "@material-ui/core/Container";
 const useStyles = makeStyles((theme) => (
         {
             category: {
-                width: "150px",
+                minWidth: "150px",
                 textShadow: "2px 2px 3px black",
 
             },
@@ -84,7 +84,7 @@ export function AllSkillTags() {
             categories.map(
                 (category, index) => <Fragment key={index}>
                     {index !== 0 ? <Box className={classes.line}/> : null}
-                    <Box display={"flex"} alignItems={"center"} flexWrap={"wrap"}>
+                    <Box display={"flex"} alignItems={"center"}>
                         <Typography variant={"h5"} className={classes.category}>{category}</Typography>
                         <Box display={"flex"}>
                             <SkillTags skillNames={tags[category]}/>

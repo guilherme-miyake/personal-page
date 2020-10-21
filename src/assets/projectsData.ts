@@ -16,11 +16,12 @@ export const frameworkTags = [
 
 export const toolTags = [
     "terraform-tool",
+    "kubernetes-tool",
+    "postgresql-tool",
+    "redshift-tool",
     "kafka-tool",
     "airflow-tool",
     "camunda-tool",
-    "postgresql-tool",
-    "redshift-tool",
     "pandas-tool"
 ]
 
@@ -38,7 +39,7 @@ export type allTags =
 // The first project will be showcased in the Resume page under Personal Projects
 export const projects: Project[] = [
     {
-        title: "My Personal Webapp",
+        title: "My Personal Page",
         purpose: ["is to have a showcase for both my experience and skills using an webpage interface"],
         solution: [
             "I  managed to make some better choices on my stack and code organization, due to past experiences doing" +
@@ -162,11 +163,17 @@ export const projects: Project[] = [
     },
     {
         title: "The Dungeon Backstage",
-        purpose: ["is to have a showcase for both my experience and skills using an webpage interface"],
+        purpose: ["is to create a platform to support TTRPG gamers to develop and run their own game with a great user " +
+        "experience and little to no coding required."],
         solution: [
-            "I decided to go with ",
+            "I am continuously experimenting with a lot of new tools and libraries, and being a very extensive project with many" +
+            " technical challenges, I often had to do large refactors and back-tracks in order to properly apply new skills and tools" +
+            " that will help to move this project forward.",
+            "Among the tools and technologies used in this project are: react redux in order to have a better state management" +
+            " for resources used across the app; react saga, which helps to implement saga patterns in order to better manage" +
+            " async operations and side effects from redux events, such as handling API calls; run-types in order to validate " +
+            " dynamically built objects and to construct validators for user built entities."
         ],
-        results: ["this super awesome webpage where you can read stuff about me and judge me based on things I wrote"],
         skillStack: [
             "typescript-language",
             "javascript-language",
@@ -175,6 +182,28 @@ export const projects: Project[] = [
         ],
         experienceId: ""
     },
+
+    {
+        title: "Machine Learning Deployment and Integration",
+        purpose: [
+            "was to create an easy to replicate API wrapper for data science models, in order to enable " +
+            "our data scientists to deploy their models faster in a micro-service-like structure"
+        ],
+        solution: [
+            "we started by going over our old monolithic API wrapper for Data Science models and implementing some" +
+            "new features to better understand how it worked and which were its problems. This application had a very" +
+            "complex code structure and some other issues hard to refactor, it was build with docker and Django, the " +
+            "implemented features were better error handling, persisting more data, and fixing some other small issues.",
+            "Next, we started building the wrapper from scratch using AWS ECS and Docker , Flask and SQLAlchemy as our ORM, this " +
+            ""
+        ],
+        contribution: [
+            ""
+        ],
+        results: [""],
+        skillStack: [""],
+        experienceId: "software+engineer+@+creditas"
+    },
     // {
     //     title: "AWS Infrastructure and Permissions for Data Engineering",
     //     purpose: [
@@ -182,7 +211,7 @@ export const projects: Project[] = [
     //     ],
     //     solution: [
     //         "I started by learning how to configure and " +
-    //         "we had three targets: start all new projects using IaC, migrate old projects and resources created manually to IaC, break down roles and grousps "
+    //         "we had three targets: start all new projects using IaC, migrate old projects and resources created manually to IaC, break down roles and groups "
     //     ],
     //     contribution: [
     //         ""
@@ -196,7 +225,7 @@ export const projects: Project[] = [
 
 
 // Kafka observability and control systems
-// Kafka and Analytics Control Center
+// Spark Stream Processing
 
 // Credit Analyzer
 // Loan contract generator
