@@ -1,6 +1,7 @@
 import SectionItem from "../SectionItem";
 import React from "react";
 
+
 export default function Linkedin() {
     return <SectionItem title={"Not replying on LinkedIn:"}>
         <div className="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US"

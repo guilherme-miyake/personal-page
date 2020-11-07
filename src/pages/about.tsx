@@ -43,16 +43,16 @@ export default function About(props:{location:any}) {
 
         <SectionHeader title={text("contact")} icon={AlternateEmail}/>
         <Box display={"flex"} flexDirection={"row"} alignItems={"flex-start"} flexWrap={"wrap"} overflow={"hidden"}>
-            <Box display={"flex"} flexDirection={"column"} width={"calc(100%/3 - 10px)"} minWidth={"450px"}
+            <Box display={"flex"} flexDirection={"column"} width={"39%"} minWidth={"335px"}
                  maxWidth={"100%"}>
                 <Phone/>
                 <Steam/>
             </Box>
-            <Box display={"flex"} flexDirection={"column"} width={"calc(50% - 260px)"} minWidth={"350px"}
+            <Box display={"flex"} flexDirection={"column"} width={"30%"} minWidth={"335px"}
                  maxWidth={"100%"}>
                 <Linkedin/>
             </Box>
-            <Box display={"flex"} flexDirection={"column"} width={"calc(50% - 260px)"} minWidth={"350px"}
+            <Box display={"flex"} flexDirection={"column"} width={"30%"} minWidth={"335px"}
                  maxWidth={"100%"}>
                 <GitHub/>
             </Box>

@@ -3,6 +3,7 @@ module.exports = {
     title: `Guilherme Toshio Miyake - Personal Page`,
     description: `A personal page built with Gatsby, React, Typescript and MaterialUI.`,
     author: `@guilherme-miyake`,
+    icon: './src/images/favicon.ico'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

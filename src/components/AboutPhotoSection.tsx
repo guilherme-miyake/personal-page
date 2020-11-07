@@ -5,6 +5,7 @@ import {Box} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import useText from "../hooks/useText";
 import {Translation} from "../locales";
+import PhotoImage from "./PhotoImage";
 
 const useStyles = makeStyles(() => ({
     box: {
@@ -15,11 +16,6 @@ const useStyles = makeStyles(() => ({
         alignContent: "center",
         margin: "10px 0px",
         flexWrap: "wrap"
-    },
-    photo: {
-        width: "300px",
-        height: "300px",
-        borderRadius: "30px"
     },
     zen: {
         textShadow: "2px 2px 3px black"
@@ -41,7 +37,7 @@ export default function AboutPhotoSection() {
     ]
 
     return <Container className={classes.box}>
-        <img className={classes.photo} src={"https://picsum.photos/300/300"} alt={"Guilherme Toshio Miyake"}/>
+        <PhotoImage/>
         <Box flexGrow={2} minWidth={"300px"} m={"10px 10px"}>
             <br/>
             {tzp.map((text, index) => {

@@ -3,6 +3,8 @@ import {Project} from "../components/ProjectSection";
 export const languageTags = [
     "kotlin-language",
     "python-language",
+    "scala-language",
+    "golang-language",
     "typescript-language",
     "javascript-language",
 ]
@@ -11,6 +13,7 @@ export const frameworkTags = [
     "django-framework",
     "spring-framework",
     "reactjs-framework",
+    "gatsby-framework",
     "pyqt-framework",
 ]
 
@@ -50,13 +53,16 @@ export const projects: Project[] = [
             "(Angular and Flutter), and was the only framework I had had hands-on experience.",
             "Typescript on the other hand, was chosen despite its challenges and overheads, because for each minute more" +
             " I spent writing the code helped me save me dozens of minutes that I would otherwise have to spend" +
-            " debugging the application."
+            " debugging the application.",
+            "Finally, I decided to run it with Gatsby in order to try and understand how to better work with a static framework" +
+            " in which I could learn more about headless CSM integration, static page generation and performance optimization"
         ],
         results: ["this super awesome webpage where you can read stuff about me and judge me based on things I wrote"],
         skillStack: [
             "typescript-language",
             "javascript-language",
             "reactjs-framework",
+            "gatsby-framework",
         ],
         experienceId: ""
     },
@@ -227,7 +233,8 @@ export const projects: Project[] = [
 
 
 // Kafka observability and control systems
-// Spark Stream Processing
+//
+// Scala Spark Stream Processing
 
 // Credit Analyzer
 // Loan contract generator

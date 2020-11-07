@@ -11,34 +11,9 @@ import responsiveFontSizes from "@material-ui/core/styles/responsiveFontSizes";
 import React from 'react';
 import {I18nextProvider} from "react-i18next";
 import i18n from "i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
 import English from "./src/locales/English";
 import Portuguese from "./src/locales/Portuguese";
-
-i18n.use(LanguageDetector).init({
-    // we init with resources
-    resources: {
-        US: English,
-        BR: Portuguese
-    },
-    fallbackLng: "US",
-    debug: true,
-
-    // have a common namespace used around the full app
-    ns: Object.keys(English),
-    defaultNS: "Home",
-
-    keySeparator: false, // we use content as keys
-
-    interpolation: {
-        escapeValue: false, // not needed for react!!
-        formatSeparator: ","
-    },
-
-    react: {
-        wait: true
-    }
-});
+import I18nextBrowserLanguageDetector from "i18next-browser-languagedetector";
 
 let theme = createMuiTheme({
     breakpoints: {
@@ -69,6 +44,31 @@ let theme = createMuiTheme({
 theme = responsiveFontSizes(theme)
 
 export const wrapRootElement = ({ element }) => {
+    i18n.use(I18nextBrowserLanguageDetector).init({
+        // we init with resources
+        resources: {
+            en: English,
+            pt: Portuguese
+        },
+        fallbackLng: "en",
+        debug: true,
+
+        // have a common namespace used around the full app
+        ns: Object.keys(English),
+        defaultNS: "Home",
+
+        keySeparator: false, // we use content as keys
+
+        interpolation: {
+            escapeValue: false, // not needed for react!!
+            formatSeparator: ","
+        },
+
+        react: {
+            wait: true
+        }
+    });
+
     return (
         <React.StrictMode>
             <I18nextProvider i18n={i18n}>
