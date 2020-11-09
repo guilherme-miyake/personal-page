@@ -1,7 +1,7 @@
 import React, {Fragment, useEffect, useState} from "react";
 import {BusinessCenter, History} from "@material-ui/icons";
 import SectionHeader from "../components/SectionHeader";
-import {allTags, projects} from "../assets/projectsData";
+import {projects} from "../assets/projectsData";
 import {FilterSkills} from "../components/SkillTag";
 import {LeftButton, RightButton} from "../components/SectionButtons";
 import Box from "@material-ui/core/Box";
@@ -9,7 +9,6 @@ import {formatName} from "../components/DynamicBreadcrumbs";
 import ProjectSection from "../components/ProjectSection";
 import {educationExperiences, otherExperiences, workExperiences} from "../assets/experienceData";
 import SectionItem from "../components/SectionItem";
-import Layout from "../components/Layout";
 
 export default function Projects(props:{pageContext:any}) {
     const tag = props.pageContext.tag

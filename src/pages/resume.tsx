@@ -10,7 +10,6 @@ import {educationExperiences, workExperiences} from "../assets/experienceData";
 import {AllSkillTags} from "../components/SkillTag";
 import ProjectSection from "../components/ProjectSection";
 import {projects} from "../assets/projectsData";
-import Layout from "../components/Layout"
 
 export default function Resume(props:{location:any}) {
     const text = useText<Translation["Resume"]>("Resume")

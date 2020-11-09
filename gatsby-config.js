@@ -8,10 +8,19 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: `${__dirname}/src/assets/svg`,
+
+        }
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     `gatsby-transformer-sharp`,
