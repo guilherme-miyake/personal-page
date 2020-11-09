@@ -1,4 +1,4 @@
-import React, {Fragment, useState} from "react";
+import React, {Fragment, useEffect, useState} from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import useTheme from "@material-ui/core/styles/useTheme";
 // @ts-ignore
@@ -39,8 +39,8 @@ const LanguageController = (props:{i18n:any}) => {
         }
     }
 
-    //
-    handleChange({target: {value: i18n.language}})
+    useEffect(() => handleChange({target: {value: i18n.language}}), [i18n.language])
+
 
     return <Fragment>
         <Box className={classes.select}>
