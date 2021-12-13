@@ -28,19 +28,14 @@ jobs:
           repository: guilherme-miyake/guilherme-miyake.github.io
           path: ./deploy
 
-      - uses: actions/cache@v2
+      - uses: actions/setup-node@v2
         with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install # will run `yarn install` command
-
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: build # will run `yarn build` command
-
+            node-version: '14.x'
+            cache: 'yarn'
+            
+      - run: yarn install
+      - run: yarn build
+      
       - run: rm ./deploy/precache-manifest* && rm -r ./deploy/static
       - run: cp ./build/index.html ./deploy/404.html && cp -r ./build/* ./deploy
 
