@@ -36,7 +36,7 @@ jobs:
       - run: yarn install
       - run: yarn build
       
-      - run: rm -r ./deploy/
+      - run: rm -r ./deploy/*
       - run: cp -r ./public/* ./deploy
 
       - name: Pushes to another repository
