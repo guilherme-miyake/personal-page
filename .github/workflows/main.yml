@@ -36,8 +36,8 @@ jobs:
       - run: yarn install
       - run: yarn build
       
-      - run: rm ./deploy/precache-manifest* && rm -r ./deploy/static
-      - run: cp ./build/index.html ./deploy/404.html && cp -r ./build/* ./deploy
+      - run: rm -r ./deploy/
+      - run: cp -r ./public/* ./deploy
 
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@master

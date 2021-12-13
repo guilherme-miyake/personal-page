@@ -6,7 +6,7 @@
 
 // You can delete this file if you're not using it
 import CssBaseline from "@material-ui/core/CssBaseline";
-import {createMuiTheme, ThemeProvider} from "@material-ui/core/styles";
+import {createTheme, ThemeProvider} from "@material-ui/core/styles";
 import responsiveFontSizes from "@material-ui/core/styles/responsiveFontSizes";
 import React from 'react';
 import {I18nextProvider} from "react-i18next";
@@ -15,7 +15,7 @@ import English from "./src/locales/English";
 import Portuguese from "./src/locales/Portuguese";
 import I18nextBrowserLanguageDetector from "i18next-browser-languagedetector";
 
-let theme = createMuiTheme({
+let theme = createTheme({
     breakpoints: {
         values: {
             xs: 0,
