@@ -40,9 +40,9 @@ jobs:
       - run: cp -r ./public/* ./deploy
 
       - name: Pushes to another repository
-        uses: cpina/github-action-push-to-another-repository@master
+        uses: EndBug/add-and-commit@v7
         with:
-          source-directory: 'deploy'
+          cwd: './deploy'
           destination-github-username: 'guilherme-miyake'
           destination-repository-name: 'guilherme-miyake.github.io'
           user-email: gui.fido@gmail.com
