@@ -81,19 +81,20 @@ export default function ResumeSummarySection(props: { startingVersion: number, l
             {
                 props.location.pathname === "/about" && summaryVersion === 1 ?
                     <LeftButton to={"/resume"}>
-                        view my resume
+                        {text('button resume')}
                     </LeftButton> :
                     <LeftButton onClick={() => changeVersion(summaryVersion + 1)} disabled={summaryVersion >= 2}>
-                        view a heavier version
+                        {text('button left')}
                     </LeftButton>
             }
 
             {
                 props.location.pathname === "/resume" && summaryVersion === 0 ? <RightButton to={"/about"}>
-                        view more about me
+                        {text('button about')}
                     </RightButton> :
                     <RightButton onClick={() => changeVersion(summaryVersion - 1)} disabled={summaryVersion === 0}>
-                        view a lighter version
+                        {text('button right')}
+
                     </RightButton>
             }
 

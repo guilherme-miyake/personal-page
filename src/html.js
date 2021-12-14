@@ -17,7 +17,6 @@ export default function HTML(props) {
               content=" A personal page built with React, Typescript and MaterialUI"
           />
           <title>Guilherme Toshio Miyake - Personal Page</title>
-          <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>

@@ -42,9 +42,7 @@ let theme = createTheme({
     },
 });
 theme = responsiveFontSizes(theme)
-
-export const wrapRootElement = ({ element }) => {
-    i18n.use(I18nextBrowserLanguageDetector).init({
+i18n.use(I18nextBrowserLanguageDetector).init({
         // we init with resources
         resources: {
             en: English,
@@ -69,6 +67,7 @@ export const wrapRootElement = ({ element }) => {
         }
     });
 
+export const wrapRootElement = ({ element }) => {
     return (
         <React.StrictMode>
             <I18nextProvider i18n={i18n}>

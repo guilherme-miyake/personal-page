@@ -1,4 +1,8 @@
 export const Resume = {
+    'button resume': 'view my resume',
+    'button about': 'view more about me',
+    'button left': 'more serious',
+    'button right': 'more chill',
 
     "bio title": `Bio`,
 

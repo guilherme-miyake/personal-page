@@ -3,6 +3,7 @@ export const Home = {
     "about": "About Me",
     "resume": "Resume",
     "projects": "Projects",
-    "repo link": "This Page Repository",
+    "repo link": "Webpage's Code",
+    "git link": "Github",
     "tdb link": `RPG WebApp (WIP)`
 }

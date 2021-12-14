@@ -1,5 +1,8 @@
 export const Resume = {
-
+    'button resume': 'veja meu currículo',
+    'button about': 'veja minha biografia',
+    'button left': 'mais sério',
+    'button right': 'mais de boas',
     "bio title": `Bio`,
 
     "bio text 0": `
@@ -55,11 +58,7 @@ export const Resume = {
     "personal title": "Personal Projects",
 
     "language title": `Language Skills`,
-    //
-    // "language text 0":`Writing: Native Portuguese, Advanced English, Intermediate Spanish`,
-    // "language text 1":`Reading: Native Portuguese, Advanced English, Intermediate Spanish`,
-    // "language text 3":`Listening: Native Portuguese, Advanced English, Intermediate Spanish`,
-    // "language text 2":`Speaking: Native Portuguese, Advanced English, Basic Spanish`,
+
     "language text portuguese": `Portuguese:\t My mother language.`,
     "language text english": `English:\t Pretty much fluent, but with some pronunciation issues.`,
     "language text spanish": `Español:\t I can read and write well with some help, but I can only talk by using hybrid/mixed languages.`,

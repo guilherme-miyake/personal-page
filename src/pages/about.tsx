@@ -13,7 +13,7 @@ import ResumeSummarySection from "../components/ResumeSummarySection";
 import AboutPhotoSection from "../components/AboutPhotoSection";
 
 
-export default function About(props:{location:any}) {
+export default function About(props: { location: any }) {
     const text = useText<Translation["About"]>("About")
 
     const hobbies = [
@@ -43,16 +43,16 @@ export default function About(props:{location:any}) {
 
         <SectionHeader title={text("contact")} icon={AlternateEmail}/>
         <Box display={"flex"} flexDirection={"row"} alignItems={"flex-start"} flexWrap={"wrap"} overflow={"hidden"}>
-            <Box display={"flex"} flexDirection={"column"} width={"39%"} minWidth={"335px"}
+            <Box display={"flex"} flexDirection={"column"} width={"33%"} minWidth={"335px"}
                  maxWidth={"100%"}>
-                <Phone/>
                 <Steam/>
             </Box>
-            <Box display={"flex"} flexDirection={"column"} width={"30%"} minWidth={"335px"}
+            <Box display={"flex"} flexDirection={"column"} width={"33%"} minWidth={"335px"}
                  maxWidth={"100%"}>
-                <Linkedin/>
+                <Phone/>
+
             </Box>
-            <Box display={"flex"} flexDirection={"column"} width={"30%"} minWidth={"335px"}
+            <Box display={"flex"} flexDirection={"column"} width={"33%"} minWidth={"335px"}
                  maxWidth={"100%"}>
                 <GitHub/>
             </Box>

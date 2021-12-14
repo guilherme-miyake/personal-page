@@ -46,7 +46,6 @@ const useStyles = makeStyles((theme) => ({
 export default function SectionHeader(props: { title: string, icon: SvgIconComponent }) {
     const theme = useTheme()
     const classes = useStyles(theme)
-
     return <Fragment>
         <Container className={classes.title}>
             <SvgIcon className={classes.icon} component={props.icon}/>

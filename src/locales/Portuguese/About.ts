@@ -1,12 +1,12 @@
 export const About = {
-    "the zen of python 0": "Beautiful is better than ugly. ",
-    "the zen of python 1": "Explicit is better than implicit. ",
-    "the zen of python 2": "Simple is better than complex. ",
-    "the zen of python 3": "Complex is better than complicated. ",
-    "the zen of python 4": "In the face of ambiguity, refuse the temptation to guess.",
-    "the zen of python 5": "Now is better than never.",
-    "the zen of python 6": "Although never is often better than *right* now.",
-    "the zen of python footer": "- The Zen of Python (Redacted)",
+    "the zen of python 0": "Bonito é melhor que feio. ",
+    "the zen of python 1": "Explicito é melhor que implícito. ",
+    "the zen of python 2": "Simples é melhor que complexo. ",
+    "the zen of python 3": "Complexo é melhor que complicado. ",
+    "the zen of python 4": "Frente à ambiguidade, recuse a tentação de adivinhar.",
+    "the zen of python 5": "Agora é melhor que nunca.",
+    "the zen of python 6": "Apesar de nunca ser frequentemente melhor que *agora mesmo*.",
+    "the zen of python footer": "- O Zen do Python (Redacted)",
 
     "hobbies title": `What are my hobbies?`,
     "hobbies text 0": `I love to play all kind of games, ranging from tabletop RPG to action
@@ -33,7 +33,7 @@ export const About = {
     "degree text 1": `Professionally, I wouldn't mind returning to the Civil Engineering area in order to help research 
                 and develop exciting new technologies and solutions, but this is not a priority for me and advancing my
                 career as a software developer is bringing me closer to the skills required to work in projects I'm
-                interest in.`,
+                interested in.`,
     "degree text 2": ` Also, I get to say that I could design a bridge or skyscraper, which sounds very impressive
                 even if not likely to happen`,
 
