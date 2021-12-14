@@ -42,7 +42,7 @@ export default function About(props: { location: any }) {
         <SectionItem title={text("degree title")} textArray={degree}/>
 
         <SectionHeader title={text("contact")} icon={AlternateEmail}/>
-        <Box display={"flex"} flexDirection={"row"} alignItems={"flex-start"} flexWrap={"wrap"} overflow={"hidden"}>
+        <Box display={"flex"} justifyContent={"space-evenly"} flexDirection={"row"} alignItems={"flex-start"} flexWrap={"wrap"} overflow={"hidden"}>
             <Box display={"flex"} flexDirection={"column"} width={"33%"} minWidth={"335px"}
                  maxWidth={"100%"}>
                 <Steam/>
