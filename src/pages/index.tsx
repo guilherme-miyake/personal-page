@@ -6,6 +6,7 @@ import HomeLink from "../components/HomeLink";
 import {Box} from "@material-ui/core";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import {Translation} from "../locales";
+import SEO from "../components/seo";
 
 const useStyles = makeStyles(() => ({
         links: {
@@ -22,6 +23,11 @@ export default function Home() {
     const classes = useStyles()
 
     return <Fragment>
+        <SEO
+            title="Home"
+            description={"A personal page built with React, Typescript and MaterialUI"}
+        />
+
         <SectionHeader title={"Pages"} icon={Menu}/>
         <Box className={classes.links}>
             <HomeLink to="/about" title={text("about")} icon={Person}/>

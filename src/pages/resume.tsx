@@ -10,6 +10,7 @@ import {educationExperiences, workExperiences} from "../assets/experienceData";
 import {AllSkillTags} from "../components/SkillTag";
 import ProjectSection from "../components/ProjectSection";
 import {projects} from "../assets/projectsData";
+import SEO from "../components/seo";
 
 export default function Resume(props:{location:any}) {
     const text = useText<Translation["Resume"]>("Resume")
@@ -22,6 +23,10 @@ export default function Resume(props:{location:any}) {
     ]
 
     return <Fragment>
+        <SEO
+            title="Resume"
+            description="My professional resume"
+        />
         <ResumeSummarySection startingVersion={1} location={props.location}/>
         <SectionHeader title={text("work title")} icon={Business}/>
         {

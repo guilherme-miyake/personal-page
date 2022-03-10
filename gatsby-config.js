@@ -9,7 +9,7 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 
 module.exports = {
     siteMetadata: {
-        title: `Guilherme Toshio Miyake - Personal Page`,
+        title: `Guilherme Toshio Miyake`,
         description: `A personal page built with Gatsby, React, Typescript and MaterialUI.`,
         author: `@guilherme-miyake`,
         siteUrl

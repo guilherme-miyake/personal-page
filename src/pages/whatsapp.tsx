@@ -3,6 +3,7 @@ import Phone from "../components/contactBadges/Phone";
 import useText from "../hooks/useText";
 import {Translation} from "../locales";
 import {Buffer} from "buffer";
+import SEO from "../components/seo";
 
 
 export default function About(props: { location: any }) {
@@ -11,6 +12,10 @@ export default function About(props: { location: any }) {
     let message = encodeURIComponent(text("greetings"))
     useEffect(()=> { window.location.href = link + message})
     return <Fragment>
+        <SEO
+            title={"WhatsApp"}
+            description={"Start a conversation on WhatsApp"}
+        />
         <Phone/>
     </Fragment>
 }

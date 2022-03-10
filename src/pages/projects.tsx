@@ -9,6 +9,7 @@ import {formatName} from "../components/DynamicBreadcrumbs";
 import ProjectSection from "../components/ProjectSection";
 import {educationExperiences, otherExperiences, workExperiences} from "../assets/experienceData";
 import SectionItem from "../components/SectionItem";
+import SEO from "../components/seo";
 
 export default function Projects(props:{pageContext:any}) {
     const tag = props.pageContext.tag
@@ -23,6 +24,10 @@ export default function Projects(props:{pageContext:any}) {
     ) : projects
 
     return <Fragment>
+        <SEO
+            title={"Projects"}
+            description="Professional and personal projects"
+        />
         <Box display={"flex"} flexDirection={"row"} justifyContent={"space-between"}>
             <LeftButton to={"/resume"}>
                 view my resume
@@ -37,7 +42,7 @@ export default function Projects(props:{pageContext:any}) {
             displayExperience ?
                 <Fragment>
                     <SectionHeader title={
-                        "My History: " +
+                        "Experience: " +
                         formatName(displayExperience.title ? `${displayExperience.title}` : "") +
                         formatName(displayExperience.where ? " @ " + displayExperience.where : "")
 

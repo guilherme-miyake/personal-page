@@ -12,11 +12,7 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
           <meta name="theme-color" content="#000000" />
-          <meta
-              name="description"
-              content=" A personal page built with React, Typescript and MaterialUI"
-          />
-          <title>Guilherme Toshio Miyake - Personal Page</title>
+          <title>Guilherme Toshio Miyake</title>
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>

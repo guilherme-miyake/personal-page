@@ -11,6 +11,7 @@ import useText from "../hooks/useText";
 import {Translation} from "../locales";
 import ResumeSummarySection from "../components/ResumeSummarySection";
 import AboutPhotoSection from "../components/AboutPhotoSection";
+import SEO from "../components/seo";
 
 
 export default function About(props: { location: any }) {
@@ -32,7 +33,10 @@ export default function About(props: { location: any }) {
     ]
 
     return <Fragment>
-
+        <SEO
+            title="About"
+            description="A little about me and my contact information"
+        />
         <ResumeSummarySection startingVersion={0} location={props.location}/>
         <AboutPhotoSection/>
 
