@@ -5,5 +5,6 @@ export const Home = {
     "projects": "Projects",
     "repo link": "Webpage's Code",
     "git link": "Github",
-    "tdb link": `RPG WebApp (WIP)`
+    "tdb link": `RPG WebApp (WIP)`,
+    "greetings": "Hello, I saw your personal page on github and decided to reach out o/"
 }
