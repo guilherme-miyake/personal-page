@@ -12,7 +12,6 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
           <meta name="theme-color" content="#000000" />
-          <title>Guilherme Toshio Miyake</title>
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
