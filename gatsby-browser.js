@@ -46,7 +46,7 @@ i18n.use(I18nextBrowserLanguageDetector).init({
         // we init with resources
         resources: {
             en: English,
-            pt: Portuguese
+            // pt: Portuguese
         },
         fallbackLng: "en",
         debug: true,
