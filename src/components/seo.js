@@ -32,9 +32,7 @@ function SEO({description, lang, meta, title}) {
     )
     const metaDescription = description || site.siteMetadata.description
     const defaultTitle = site.siteMetadata?.title
-    console.log(site.siteMetadata)
     const imagePath = getSrc(image)
-    console.log(imagePath)
     return (
         <Helmet
             htmlAttributes={{
@@ -53,6 +51,10 @@ function SEO({description, lang, meta, title}) {
                 {
                     property: `og:image`,
                     content: imagePath,
+                },
+                {
+                    name: `description`,
+                    content: metaDescription,
                 },
                 {
                     property: `og:description`,
