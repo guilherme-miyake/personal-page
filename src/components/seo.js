@@ -22,9 +22,9 @@ function SEO({description, lang, meta, title}) {
             author
           }
         }
-        image: file(relativePath: { eq: "photo.jpg" }) {
+        image: file(relativePath: { eq: "preview.png" }) {
         childImageSharp {
-          gatsbyImageData(layout: FIXED)
+          gatsbyImageData
         }
       }
       }
