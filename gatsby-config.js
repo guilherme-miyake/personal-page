@@ -12,6 +12,7 @@ module.exports = {
         title: `Guilherme Toshio Miyake`,
         description: `A personal page built with Gatsby, React, Typescript and MaterialUI.`,
         author: `@guilherme-miyake`,
+        image: 'src/assets/images/photo.jpg',
         siteUrl
     },
     plugins: [
@@ -54,16 +55,9 @@ module.exports = {
             },
         },
         `gatsby-plugin-preact`,
+        `gatsby-plugin-image`,
+        `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
-        {
-            resolve: `gatsby-plugin-sharp`,
-            options: {
-                icon: './src/assets/images/favicon.ico',
-                // Set to false to allow builds to continue on image errors
-                failOnError: true,
-                // deprecated options and their defaults:
-            },
-        },
         'gatsby-plugin-styled-components',
         {
             resolve: `gatsby-plugin-material-ui`,

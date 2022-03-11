@@ -1,6 +1,6 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import {useStaticQuery, graphql} from "gatsby"
+import {GatsbyImage} from "gatsby-plugin-image"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -14,26 +14,30 @@ import Img from "gatsby-image"
  */
 
 const PhotoImage = () => {
-  const data = useStaticQuery(graphql`
+    const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "photo.jpg" }) {
         childImageSharp {
-          fixed(width: 300, height: 300) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
     }
   `)
 
-  if (!data?.placeholderImage?.childImageSharp?.fixed) {
-    return <div>Picture not found</div>
-  }
+    if (!data?.placeholderImage?.childImageSharp?.fixed) {
+        return <div>Picture not found</div>
+    }
 
-  return <Img
-      fixed={data.placeholderImage.childImageSharp.fixed}
-      alt={"Guilherme Toshio Miyake"}
-      style={{ borderRadius: "30px"}}/>
+    return <GatsbyImage
+        image={{
+            images: data.placeholderImage.childImageSharp.gatsbyImageData,
+            layout: "fixed",
+            width: 300,
+            height: 300
+        }}
+        alt={"Guilherme Toshio Miyake"}
+
+        style={{borderRadius: "30px"}}/>
 }
 
 export default PhotoImage
