@@ -11,7 +11,7 @@ export default function About(props: { location: any }) {
     return <Fragment>
         <SEO
             title={"Nota Fiscal"}
-            description={"Start a conversation on WhatsApp"}
+            description={"Abri a nota fiscal"}
         />
         <div onClick={go_to}>
             <Paper>
